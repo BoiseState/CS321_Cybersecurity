@@ -158,14 +158,14 @@ automatically by gradle or our IDE.
 
 # Scrum Process
 The focus of this project is to solve a domain-specific problem using data
-structures, while working effectively in a software engineering team.  In addition, given
+structures, while working effectively in a software engineering team. In addition, given
 the relatively small project scope, and the fixed set of requirements that are already defined (and
 will not need to be elicited with the use of a Product Owner), the team can customize the
 [Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development)) process learned in CS 208
 (or CS-HU 271) and focus exclusively on:
 
 - Dividing the project into smaller tasks (or stories) 
-- Linking commits to task IDs (e.g., `Implements task #123` or `Closes #123`) 
+- Linking commits to task IDs (e.g., `Closes #123` or `Implements task #123`) 
 - Test-Driven Development and unit testing. The [starter code](#starter-code) already
 contains [some unit tests](src/test/java/cs321) that can be [run from the command
 line](#compile-and-run-the-project-from-the-command-line).
@@ -179,17 +179,17 @@ We will create and manage tasks corresponding to stories in a Scrum
 process using the project board feature in GitHub. Check out the project
 [Projects](https://github.com/BoiseState/CS321_Cybersecurity/projects) tab provided in the starter
 repository. It contains a [project example](https://github.com/orgs/BoiseState/projects/124)
-that you can use as a model to create your own scrum project board in your private repo (feel
+that you can use as a model to create your own team Scrum board in your private repo (feel
 free to copy the contents of these tasks to your Scrum board).
 
 The team member that creates the private repo will create the project board (give it an appropriate
 name like our example) and add the other members to the project board in the `admin` role. This
-can be done from the Settings for the project board.
+can be done from the project board Settings.
 
-Using the scrum process via the project board is an important part of software engineering so take
+Using the Scrum process via the project board is an important part of software engineering so take
 some time to make good use of the project board feature in GitHub.
 
-Your Scrum board should contain the following columns (pipelines):
+Your Scrum board should contain the following columns:
 
 | Column Name     | Description                                                                                              |
 |-----------------|----------------------------------------------------------------------------------------------------------|
@@ -207,7 +207,7 @@ week, as described in the [progress reports](#11-progress-reports).
 
 Here is an example of a [valid task](https://github.com/BoiseState/CS321_Cybersecurity/issues/3)
 written in engineering language that is assigned to a developer. This task should be referenced
-by a commit containing a message similar to `Implements task #3`.
+by a commit containing a message similar to `Closes #123` or `Implements task #3`.
 
 As a warm-up exercise, each team member should create a task similar to 
 [`task #2`](https://github.com/BoiseState/CS321_Cybersecurity/issues/2) and then edit the
