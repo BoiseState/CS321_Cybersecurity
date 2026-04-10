@@ -865,7 +865,7 @@ top frequencies along with the keys for a given type of BTree. See below for the
 
 ```bash
 $ ./gradlew createJarSSHSearchDatabase
-$ java -jar build/libs/SSHSearchDatabase.jar --type=<tree-type> --database=<SQLite-database-path> \
+$ java -jar build/libs/SSHSearchDatabase.jar --type=<tree-type> --database=<sqlite-database-path> \
             --top-frequency=<10/25/50>
 ```
 
