@@ -893,8 +893,9 @@ In this case, the `--top-frequency` option is ignored.
 When `--type=test` is specified, `SSHSearchDatabase` program will create the database named
 `test.db`, then create a table named `acceptedip` (recall no hyphen in table names because of
 SQL syntax rules) and insert the following 25  entries (used as test data) in the table using
-SQL insert statements. See the SQLIte example mentioned in the previous section on how to insert
-into t a SQL database.
+SQL insert statements. Refer to the same [SQLite example](https://github.com/BoiseState/CS321-resources/tree/master/examples/SQLite)
+mentioned in the [section 7](#7-using-a-database) on how to insert
+into a SQL database.
 
 ```
 Accepted-111.222.107.90 25
