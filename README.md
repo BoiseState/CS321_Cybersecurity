@@ -46,7 +46,7 @@ This repository contains:
 - sample [JUnit](https://junit.org/) tests, in the [src/test/java/cs321/](src/test/java/cs321) folder
     - note that we have provided a full unit test for the BTree class in `BTreeTest.java` class
 - sample input data and expected results, in the [data/](data) folder
-- a wrapper for the [gradle](https://gradle.org/) build tool, which simplifies installing and running gradle. In turn, gradle facilitates and handles:
+- a wrapper for the [Gradle](https://gradle.org/) build tool, which simplifies installing and running Gradle. In turn, Gradle facilitates and handles:
     - Java library (e.g., JUnit) dependency management
     - Compiling the code
     - Generating self-containing jars
@@ -57,7 +57,7 @@ This repository contains:
 cannot have its own GitHub issues, which will be used as Scrum tasks.
 
 :heavy_exclamation_mark: **NOTE: Do NOT modify the package structure in the [src/](src) folder**,
-otherwise the project may not build correctly using gradle.
+otherwise the project may not build correctly using Gradle.
 
 ## Ensure that we have the correct JDK version
 Use the following command to check our installed JDK version:
@@ -86,7 +86,7 @@ One team member should:
     - Give repository write permissions to all the other team members
     - Add your instructor and teaching assistants as collaborators
 	  (they will provide you with their GitHub ids)
-- Clone (**not fork**) this repository and verify that gradle can be run.
+- Clone (**not fork**) this repository and verify that Gradle can be run.
 
 ```bash
 $ git clone https://github.com/BoiseState/CS321_Cybersecurity.git
@@ -94,8 +94,8 @@ $ cd CS321_Cybersecurity
 $ ./gradlew tasks
 ```
 
-The last command should perform a one-time gradle setup, followed by listing all the available
-gradle tasks and their descriptions.
+The last command should perform a one-time Gradle setup, followed by listing all the available
+Gradle tasks and their descriptions.
 
 **NOTE:** On Windows, the `./gradlew` command should be replaced with `gradlew` (which will
 call the [`gradlew.bat`](/gradlew.bat) file)
@@ -167,11 +167,11 @@ Alternatively, this project can be opened with [VSCode](https://code.visualstudi
 :book: See this [wiki page for detailed instructions to run this project in VSCode](https://github.com/BoiseState/CS321_Cybersecurity/wiki/Instructions-to-run-in-VSCode).
 
 ## Notes for creating additional files and tests, while keeping the Gradle project structure
-We can add as many classes as we want in `src/main/java`, and gradle should build them automatically. 
+We can add as many classes as we want in `src/main/java`, and Gradle should build them automatically. 
 In other words, we should not have to make any changes to the `build.gradle`.
 
 Also, we can add new test files with new tests cases in `src/test/java` and those will be run
-automatically by gradle or our IDE.
+automatically by Gradle or our IDE.
 
 <hr/>
 
@@ -535,8 +535,8 @@ provide a top frequency count to use to output just the top occurring searched q
 - `SSHSearchDatabase.java`: to **search in the SQL database** for the top occurring key
 values along with their frequencies. This database would be created as a by-product of the
 `SSHCreateBTree.java` program. There will be a single database that contains up to nine tables,
-one for each type of BTree. Each table contains all the keys from an inorder traversal for the
-corresponding type of BTree.
+one for each type of BTree. Each table will have 2 columns, namely: `key` and `frequency`. 
+Each table contains all the keys from an inorder traversal for the corresponding type of BTree.
 
 
 ### 5.1. Program Arguments
@@ -858,23 +858,24 @@ up the execution time especially when searching larger BTrees.
 
 Design a simple database to store the results (key values and frequencies) from the BTree.
 We will perform an inorder tree traversal to get the information to store in the database with
-the `<tree type>` as the table's name without the `-` (to prevent SQL syntax errors). This would
-be done at the end of creating the SSH BTree. Afterwards, we will create a separate search
+the `<tree-type>` as the table's name without the `-`, to prevent SQL syntax errors
+(e.g., if the value of `<tree-type>` is `accepted-ip`, then the table name will be `acceptedip`).
+This would be done at the end of creating the SSH BTree. Afterwards, we will create a separate search
 program named `SSHSearchDatabase` that uses the database instead of the BTree and finds the
 top frequencies along with the keys for a given type of BTree. See below for the usage:
 
 ```bash
 $ ./gradlew createJarSSHSearchDatabase
-$ java -jar build/libs/SSHSearchDatabase.jar --type=<tree-type> --database=<SQLite-database-path> \
+$ java -jar build/libs/SSHSearchDatabase.jar --type=<tree-type> --database=<sqlite-database-path> \
             --top-frequency=<10/25/50>
 ```
 
 We will use the embedded SQLite database for this project. The SQLite database is fully contained
-in a jar file that gradle will automatically pull down for us. 
+in a jar file that Gradle will automatically pull down for us. 
 
 [SQLite example](https://github.com/BoiseState/CS321-resources/tree/master/examples/SQLite): A
 quick starter example on how to set up and use SQLite. Note that this example has the SQLite jar
-file in it as the example does not have gradle setup in it like we do in our project.
+file in it as the example does not have Gradle setup in it like we do in our project.
 
 ### 7.1 Testing the SSHSearchDatabase
 
@@ -893,8 +894,9 @@ In this case, the `--top-frequency` option is ignored.
 When `--type=test` is specified, `SSHSearchDatabase` program will create the database named
 `test.db`, then create a table named `acceptedip` (recall no hyphen in table names because of
 SQL syntax rules) and insert the following 25  entries (used as test data) in the table using
-SQL insert statements. See the SQLIte example mentioned in the previous section on how to insert
-into t a SQL database.
+SQL insert statements. Refer to the same [SQLite example](https://github.com/BoiseState/CS321-resources/tree/master/examples/SQLite)
+mentioned in the [section 7](#7-using-a-database) on how to insert
+into a SQL database.
 
 ```
 Accepted-111.222.107.90 25
