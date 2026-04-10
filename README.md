@@ -858,8 +858,9 @@ up the execution time especially when searching larger BTrees.
 
 Design a simple database to store the results (key values and frequencies) from the BTree.
 We will perform an inorder tree traversal to get the information to store in the database with
-the `<tree type>` as the table's name without the `-` (to prevent SQL syntax errors). This would
-be done at the end of creating the SSH BTree. Afterwards, we will create a separate search
+the `<tree-type>` as the table's name without the `-`, to prevent SQL syntax errors
+(e.g., if the value of `<tree-type>` is `accepted-ip`, then the table name will be `acceptedip`).
+This would be done at the end of creating the SSH BTree. Afterwards, we will create a separate search
 program named `SSHSearchDatabase` that uses the database instead of the BTree and finds the
 top frequencies along with the keys for a given type of BTree. See below for the usage:
 
