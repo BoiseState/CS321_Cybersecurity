@@ -535,8 +535,8 @@ provide a top frequency count to use to output just the top occurring searched q
 - `SSHSearchDatabase.java`: to **search in the SQL database** for the top occurring key
 values along with their frequencies. This database would be created as a by-product of the
 `SSHCreateBTree.java` program. There will be a single database that contains up to nine tables,
-one for each type of BTree. Each table contains all the keys from an inorder traversal for the
-corresponding type of BTree.
+one for each type of BTree. Each table will have 2 columns, namely: `key` and `frequency`. 
+Each table contains all the keys from an inorder traversal for the corresponding type of BTree.
 
 
 ### 5.1. Program Arguments
