@@ -2,6 +2,7 @@
 
 **Table of contents:**
 - [Learning Objectives](#learning-objectives)
+- [AI Usage](#ai-usage)
 - [Starter Code](#starter-code)
 - [Scrum Process](#scrum-process)
 - [Project Requirements](#project-requirements)
